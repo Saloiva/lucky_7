@@ -67,7 +67,11 @@ public class App {
                 continue; // Palataan kysymään uudelleen
             }
         }
-        
+        // Jos käyttäjältä loppuu rahat, peli päättyy
+        if (saldo < hinta) {
+            System.out.println("You don't have enough tokens to continue. Game over.");
+        }
+
         scanner.close();
     }
 }
